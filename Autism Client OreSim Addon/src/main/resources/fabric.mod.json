@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "oresim-addon",
+  "version": "${version}",
+  "name": "OreSim Addon",
+  "description": "AUTISM Client addon that simulates vanilla ore generation from the world seed. Ported from Nora Tweaks OreSim.",
+  "authors": [
+    "theflex5710"
+  ],
+  "contact": {},
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.theflex5710.oresim.OreSimInit"
+    ],
+    "autism": [
+      "com.theflex5710.oresim.OreSimAddon"
+    ]
+  },
+  "mixins": [
+    "oresim-addon.mixins.json"
+  ],
+  "custom": {
+    "autism:color": "33,244,255",
+    "modmenu": {
+      "parent": {
+        "id": "autism"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=25",
+    "minecraft": "${mc_compat}",
+    "fabricloader": ">=0.19.3",
+    "fabric-api": ">=${fabric_api_version}",
+    "autism": "*"
+  }
+}
